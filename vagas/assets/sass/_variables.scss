@@ -1,0 +1,63 @@
+$base-white: #ffffff;
+$grey-500: #667085;
+$grey-900: #101828;
+$logo: #3A404E;
+$hightlight: #8E2424;
+
+@mixin heading {
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 60px;
+  color: $grey-900;
+}
+
+@mixin subHeading {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: $hightlight;
+}
+
+@mixin text {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+  color: $grey-900;
+}
+
+@mixin supportingText {
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 30px;
+  color: $grey-500;
+}
+
+@mixin number {
+  font-weight: 600;
+  font-size: 60px;
+  line-height: 72px;
+  letter-spacing: -0.02em;
+  color: $hightlight;
+}
+
+@mixin work {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: $grey-500;
+}
+
+@mixin button {
+  padding: 10px 18px;
+  display: inline-block;
+  border: none;
+  outline: none;
+  background-color: $hightlight;
+  color: $base-white;
+  border-radius: 8px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken($hightlight, 10%);
+  }
+}

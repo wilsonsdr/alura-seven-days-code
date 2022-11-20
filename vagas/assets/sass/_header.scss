@@ -1,0 +1,68 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    h3 {
+      @include text;
+    }
+  }
+
+  .navigation {
+    display: flex;
+    gap: 40px;
+
+    a {
+      @include text;
+      font-size: 16px;
+      color: $grey-500;
+      position: relative;
+
+      &::after {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        background-color: $hightlight;
+        height: 3px;
+        width: 0;
+        left: 0;
+        bottom: -10px;
+        transition: 0.3s;
+      }
+
+      &:hover {
+        color: $grey-900;
+      }
+
+      &:hover::after {
+        width: 100%;
+      }
+    }
+  }
+
+  .login {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    p {
+      @include text;
+      font-size: 16px;
+      color: $grey-500;
+      cursor: pointer;
+
+      &:hover {
+        color: $grey-900;
+      }
+    }
+
+    button {
+      @include button;
+    }
+  }
+}
