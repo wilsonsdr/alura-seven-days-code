@@ -1,0 +1,39 @@
+$fundo-escuro: #000;
+$fundo-card: #1d2226;
+$fundo-card-ativo: hsla(0, 0%, 100%, 0.12);
+$texto-principal: hsla(0, 0%, 100%, 0.9);
+$texto-secundario: hsla(0, 0%, 100%, 0.6);
+$texto-escuro: hsla(0, 0%, 0%, 0.75);
+$input: #38434F;
+$primario: #70b5f9;
+$positivo: #3ec786;
+
+@mixin texto-primario {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 30px;
+  color: $texto-principal;
+}
+
+@mixin texto-secundario {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: $texto-secundario;
+}
+
+@mixin botao {
+  border-radius: 16px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 6px 29px;
+  border: none;
+  outline: none;
+  background-color: $primario;
+  cursor: pointer;
+
+  &:hover {
+    background-color: lighten($primario, 10%);
+  }
+}

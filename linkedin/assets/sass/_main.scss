@@ -1,0 +1,112 @@
+.main {
+  .personal-profile {
+    display: grid;
+    grid-template-columns: 780px;
+    grid-template-rows: repeat(2, 230px);
+    position: relative;
+
+    .banner {
+      width: 100%;
+      height: 230px;
+      border-radius: 16px 16px;
+    }
+
+    .profile-container {
+      display: flex;
+      align-items: flex-start;
+      background-color: $fundo-card;
+      padding: 60px 20px 20px 20px;
+      border-radius: 16px 16px;
+      gap: 40px;
+
+      .profile-info {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+
+        .profile-img {
+          position: absolute;
+          width: 160px;
+          height: 160px;
+          border-radius: 50%;
+          top: 120px;
+          border: 4px solid $fundo-card;
+        }
+
+        .title {
+          @include texto-primario
+        }
+
+        .subtitle {
+          @include texto-primario;
+          font-size: 16px;
+          font-weight: 400;
+        }
+
+        .extra {
+          @include texto-secundario;
+          position: relative;
+
+          span {
+            margin-left: 10px;
+
+            &::before {
+              content: "";
+              display: inline-block;
+              width: 2px;
+              height: 2px;
+              background-color: $texto-secundario;
+              position: absolute;
+              border-radius: 50%;
+              bottom: 9px;
+              left: 178px
+            }
+          }
+        }
+
+        a {
+          @include texto-secundario;
+          color: $primario;
+        }
+
+        .profile-actions {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          margin-top: 10px;
+
+          .button {
+            @include botao;
+          }
+
+          .button:nth-child(2) {
+            background-color: $fundo-card;
+            border: 2px solid $primario;
+            color: $primario;
+
+            &:hover {
+              background-color: lighten($fundo-card, 10%);
+            }
+          }
+        }
+      }
+
+      .career-details {
+        display: flex;
+        align-items: flex-start;
+        gap: 5px;
+
+        .company {
+          max-width: 32px;
+          height: 32px;
+        }
+
+        .subtitle {
+          @include texto-primario;
+          font-size: 16px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
