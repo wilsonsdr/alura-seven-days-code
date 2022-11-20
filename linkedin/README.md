@@ -1,1 +1,3 @@
+# Descrição do projeto
+
 Criando uma réplica da página de perfil de usuário do LinkedIn, créditos à [Natália F. Dev](https://github.com/natalia-fs)
