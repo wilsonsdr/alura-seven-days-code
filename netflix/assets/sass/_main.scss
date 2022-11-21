@@ -1,45 +1,49 @@
-.banner {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: 20px;
+.main {
+  padding: 80px 40px;
 
-  .sinopse {
-    color: $base-white;
-    font-weight: 500;
-  }
-
-  .buttons {
+  .banner {
     display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
     gap: 20px;
-    margin-top: 20px;
 
-    button {
+    .sinopse {
+      color: $base-white;
+      font-weight: 500;
+    }
+
+    .buttons {
       display: flex;
-      gap: 10px;
-      align-items: center;
-      border: none;
-      outline: none;
-      padding: 16px 32px;
-      border-radius: 2px;
-      font-size: 16px;
-      font-weight: 600;
-      cursor: pointer;
+      gap: 20px;
+      margin-top: 20px;
 
-      &:nth-child(1):hover {
-        background-color: $hightlight;
-        color: $base-white;
-        transition: 0.3s;
-      }
+      button {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        border: none;
+        outline: none;
+        padding: 16px 32px;
+        border-radius: 2px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
 
-      &:nth-child(2) {
-        background-color: darken($base-grey, 40%);
-        color: $base-white;
-        opacity: 95%;
+        &:nth-child(1):hover {
+          background-color: $hightlight;
+          color: $base-white;
+          transition: 0.3s;
+        }
 
-        &:hover {
-          background-color: darken($base-grey, 45%);
+        &:nth-child(2) {
+          background-color: darken($base-grey, 40%);
+          color: $base-white;
+          opacity: 95%;
+
+          &:hover {
+            background-color: darken($base-grey, 45%);
+          }
         }
       }
     }

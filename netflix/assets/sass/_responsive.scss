@@ -1,0 +1,58 @@
+@media (max-width: 1000px) {
+  .header {
+    position: fixed;
+    width: 100%;
+    background-color: black;
+    z-index: 1;
+
+    .navbar {
+      justify-content: space-between;
+      width: 100%;
+
+      .links {
+        position: fixed;
+        left: -100%;
+        top: 90px;
+        text-align: center;
+        flex-direction: column;
+        padding: 20px 0;
+        width: 100%;
+        transition: 0.3s;
+        border-radius: 0 0 20px 20px;
+        background-color: black;
+
+        li {
+          margin: 5px auto;
+        }
+
+        &.active {
+          left: 0;
+        }
+      }
+
+      .burguer {
+        display: block;
+
+        &.active .bar:nth-child(2) {
+          opacity: 0;
+        }
+
+        &.active .bar:nth-child(1) {
+          transform: translateY(8px) rotate(45deg);
+        }
+
+        &.active .bar:nth-child(3) {
+          transform: translateY(-8px) rotate(-45deg);
+        }
+      }
+    }
+
+    .user-info {
+      display: none;
+    }
+  }
+
+  .main {
+    margin-top: 110px;
+  }
+}

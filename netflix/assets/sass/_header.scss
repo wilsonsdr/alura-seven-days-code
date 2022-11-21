@@ -1,0 +1,91 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px;
+
+  .navbar {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+
+    .netflix-logo {
+      max-width: 100px;
+      height: 100%;
+    }
+
+    .links {
+      display: flex;
+      gap: 20px;
+
+      li {
+        position: relative;
+
+        &::before {
+          content: "";
+          position: absolute;
+          display: inline-block;
+          width: 0;
+          height: 3px;
+          bottom: -6px;
+          background-color: $hightlight;
+          border-radius: 3px;
+          transition: 0.3s;
+        }
+
+        &:hover::before {
+          width: 100%;
+        }
+
+        a {
+          color: $base-grey;
+
+          &:hover {
+            color: $base-white;
+          }
+        }
+      }
+    }
+
+    .burguer {
+      display: none;
+      cursor: pointer;
+
+      .bar {
+        display: block;
+        width: 28px;
+        height: 3px;
+        border: 2px;
+        margin: 5px auto;
+        background-color: $base-grey;
+        transition: all 0.3s ease-in-out;
+      }
+    }
+  }
+
+  .user-info {
+    display: flex;
+    align-items: center;
+    padding-right: 40px;
+    gap: 10px;
+
+    i {
+      font-size: 20px;
+      color: $base-white;
+      cursor: pointer;
+      display: inline-block;
+
+      &:not(:last-child) {
+        padding-right: 20px;
+      }
+
+      &:nth-child(4) {
+        font-size: 16px;
+      }
+
+      &:hover {
+        color: $base-grey;
+      }
+    }
+  }
+}
