@@ -1,68 +1,111 @@
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  .header {
+    padding: 20px 80px;
+    background-color: $base-white;
 
-  .logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
 
-    h3 {
-      @include text;
+      .logo {
+        display: flex;
+        gap: 10px;
+
+        .text {
+          @include text;
+        }
+      }
+
+      .links {
+        display: flex;
+        gap: 40px;
+
+        a {
+          @include text;
+          font-size: 16px;
+          color: $grey-500;
+          position: relative;
+          display: inline-block;
+
+          &::after {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            background-color: $hightlight;
+            height: 3px;
+            width: 0;
+            left: 0;
+            bottom: -10px;
+            transition: 0.3s;
+          }
+
+          &:hover {
+            color: $grey-900;
+          }
+
+          &:hover::after {
+            width: 100%;
+          }
+        }
+      }
+
+      .burguer {
+        display: none;
+        cursor: pointer;
+
+        .bar {
+          display: block;
+          width: 28px;
+          height: 3px;
+          border-radius: 2px;
+          background-color: $hightlight;
+          margin: 5px auto;
+          transition: all 0.3s ease-in-out;
+        }
+      }
+
+      .navigationActions {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        .text {
+          @include text;
+          font-size: 16px;
+          color: $grey-500;
+          cursor: pointer;
+
+          &:hover {
+            color: $grey-900;
+          }
+        }
+
+        .button {
+          @include button;
+        }
+      }
+    }
+
+    .about {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      gap: 40px;
+      z-index: 0;
+      padding-top: 96px;
+
+      .subHeading {
+        @include subHeading
+      }
+
+      .heading {
+        @include heading
+      }
+
+      .supportingText {
+        @include supportingText
+      }
     }
   }
-
-  .navigation {
-    display: flex;
-    gap: 40px;
-
-    a {
-      @include text;
-      font-size: 16px;
-      color: $grey-500;
-      position: relative;
-
-      &::after {
-        content: "";
-        display: inline-block;
-        position: absolute;
-        background-color: $hightlight;
-        height: 3px;
-        width: 0;
-        left: 0;
-        bottom: -10px;
-        transition: 0.3s;
-      }
-
-      &:hover {
-        color: $grey-900;
-      }
-
-      &:hover::after {
-        width: 100%;
-      }
-    }
-  }
-
-  .login {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-
-    p {
-      @include text;
-      font-size: 16px;
-      color: $grey-500;
-      cursor: pointer;
-
-      &:hover {
-        color: $grey-900;
-      }
-    }
-
-    button {
-      @include button;
-    }
-  }
-}

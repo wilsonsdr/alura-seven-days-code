@@ -1,0 +1,58 @@
+@media (max-width: 1000px) {
+  .header {
+    position: fixed;
+    width: 100%;
+    top: 0px;
+
+    .navbar {
+      .links {
+        position: fixed;
+        left: -100%;
+        top: 65px;
+        text-align: center;
+        flex-direction: column;
+        padding: 20px 0;
+        width: 100%;
+        transition: 0.3s;
+        border-radius: 0 0 20px 20px;
+        background-color: $grey-900;
+
+        li {
+          margin: 8px auto;
+        }
+
+        a {
+          color: $base-white;
+
+          &:hover {
+            color: lighten($hightlight, 10%);
+          }
+        }
+
+        &.active {
+          left: 0;
+        }
+      }
+
+      .burguer {
+        display: block;
+
+        &.active .bar:nth-child(2) {
+          opacity: 0;
+        }
+
+        &.active .bar:nth-child(1) {
+          transform: translateY(8px) rotate(45deg);
+        }
+
+        &.active .bar:nth-child(3) {
+          transform: translateY(-8px) rotate(-45deg);
+        }
+      }
+
+      .navigationActions {
+        display: none;
+      }
+    }
+  }
+}

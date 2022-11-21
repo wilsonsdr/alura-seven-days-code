@@ -11,24 +11,38 @@
 </head>
 
 <body>
-  <header class="header">
-    <div class="logo">
-      <img src="./assets/img/worldwide.svg" alt="worldwide">
-      <h3>OptimusTech</h3>
+  <header class="header" id="home">
+    <div class="navbar">
+      <div class="logo">
+        <img src="./assets/img/worldwide.svg" alt="worldwide">
+        <h3 class="text">OptimusTech</h3>
+      </div>
+      <nav>
+        <ul class="links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Produtos</a></li>
+          <li><a href="#">Recursos</a></li>
+          <li><a href="#">Sobre nós</a></li>
+        </ul>
+        <div class="burguer">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+      <div class="navigationActions">
+        <p class="text">Entrar</p>
+        <button class="button">Cadastrar</button>
+      </div>
     </div>
-    <nav>
-      <ul class="navigation">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Produtos</a></li>
-        <li><a href="#">Recursos</a></li>
-        <li><a href="#">Sobre nós</a></li>
-      </ul>
-    </nav>
-    <div class="login">
-      <p>Entrar</p>
-      <button>Cadastrar</button>
-    </div>
+    <section class="about">
+      <span class="subHeading">Sobre nós</span>
+      <h1 class="heading">Por que somos diferentes?</h1>
+      <p class="supportingText">Nós focamos nos detalhes de tudo que fazemos. Tudo para ajudar as empresas de <br> todo
+        o mundo a se concentrarem naquilo que é realmente importante para elas.</p>
+    </section>
   </header>
+  <script src="./assets/js/main.js"></script>
 </body>
 
 </html>
