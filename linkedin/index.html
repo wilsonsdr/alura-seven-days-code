@@ -14,9 +14,9 @@
 <body>
 
   <header class="header">
-    <div class="search-field">
+    <div class="searchField">
       <i class="fa-brands fa-linkedin"></i>
-      <form class="form" action="#" method="get" >
+      <form class="form" action="#" method="get">
         <i class="fa-solid fa-magnifying-glass"></i>
         <input type="text" placeholder="Pesquisar">
       </form>
@@ -64,32 +64,88 @@
       </nav>
     </div>
   </header>
- 
+
   <main class="main">
-    <div class="personal-profile">
+
+    <div class="profileContainer">
+
       <img class="banner" src="./assets/img/banner.jpeg" alt="banner">
-      <section class="profile-container">
-        <div class="profile-info">
-          <img class="profile-img" src="./assets/img/profile-img.jpeg" alt="profile-img">
+
+      <!-- section personalProfile -->
+
+      <section class="personalProfile">
+        <div class="profileInfo">
+          <img class="profileImg" src="./assets/img/profile-img.jpeg" alt="profile-img">
           <h1 class="title">Wilson Souto dos Reis</h1>
           <h2 class="subtitle">Front-End Developer & UX/UI Designer | Technology Future Club Intern</h2>
           <p class="extra">São Paulo, São Paulo, Brazil <span><a href="#">Contact Info</a></span></p>
           <span><a href="#">489 connections</a></span>
-          <div class="profile-actions">
+          <div class="profileActions">
             <button class="button">Message</button>
             <button class="button">More</button>
           </div>
         </div>
-        <div class="career-details">
+        <div class="careerDetails">
           <img class="company" src="./assets/img/ibm.jpeg" alt="ibm">
           <h2 class="subtitle">IBM</h2>
         </div>
       </section>
+
+      <!-- section highlights -->
+
+      <section class="highlights">
+        <h1 class="titleHighlight">Destaques</h1>
+        <div class="cardContainer">
+          <div class="card">
+            <div class="headerCard">
+              <p class="textCard">Publicação</p>
+              <p class="titleCard">Legenda da primeira publicaçã...</p>
+            </div>
+            <img class="imgCard" src="./assets/img/publicacao-1.png" alt="publicacao-1">
+            <div class="reactionCard">
+              <div class="likeCard">
+                <img src="./assets/img/reações.png" alt="reações">
+                <span class="likes">124</span>
+              </div>
+              <span id="comment"><a class="comments" href="#comment">5 comentarios</a></span> 
+            </div>
+          </div>
+          <div class="card">
+            <div class="headerCard">
+              <p class="textCard">Publicação</p>
+              <p class="titleCard">Legenda da segunda publicaçã...</p>
+            </div>
+            <img class="imgCard" src="./assets/img/publicacao-2.png" alt="publicacao-2">
+            <div class="reactionCard">
+              <div class="likeCard">
+                <img src="./assets/img/reações.png" alt="reações">
+                <span class="likes">124</span>
+              </div>
+              <span id="comment"><a class="comments" href="#comment">5 comentarios</a></span> 
+            </div>
+          </div>
+          <div class="card">
+            <div class="headerCard">
+              <p class="textCard">Publicação</p>
+              <p class="titleCard">Legenda da terceira publicaçã...</p>
+            </div>
+            <img class="imgCard" src="./assets/img/publicacao-3.png" alt="publicacao-3">
+            <div class="reactionCard">
+              <div class="likeCard">
+                <img src="./assets/img/reações.png" alt="reações">
+                <span class="likes">124</span>
+              </div>
+              <span id="comment"><a class="comments" href="#comment">5 comentarios</a></span> 
+            </div>
+          </div>
+        </div>
+      </section>
+
     </div>
+
   </main>
 
   <footer>
-
   </footer>
 
 </body>
