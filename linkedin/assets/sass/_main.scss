@@ -1,7 +1,11 @@
 .main {
+  display: grid;
+  grid-template-columns: 780px 320px;
+  padding: 24px 153px;
+  gap: 32px;
+
   .personal-profile {
     display: grid;
-    grid-template-columns: 780px;
     grid-template-rows: repeat(2, 230px);
     position: relative;
 

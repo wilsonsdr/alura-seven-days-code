@@ -1,0 +1,86 @@
+.header {
+  display: flex;
+  align-items: center;
+  background-color: $fundo-card;
+  max-width: 100%;
+  height: 52px;
+  padding: 9px 153px;
+  gap: 124px;
+
+  .search-field {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    i {
+      font-size: 34px;
+      cursor: pointer;
+      display: inline-block;
+    }
+
+    .form {
+      position: relative;
+
+      input {
+        height: 34px;
+        width: 280px;
+        outline: none;
+        border: none;
+        border-radius: 4px;
+        background-color: $input;
+        color: $texto-principal;
+        padding-left: 40px;
+      }
+
+      .fa-magnifying-glass {
+        position: absolute;
+        display: inline-block;
+        top: 8px;
+        left: 12px;
+        font-size: 17px;
+        z-index: 1;
+      }
+    }
+  }
+
+  .navbar {
+    .links {
+      display: flex;
+      align-items: center;
+      gap: 60px;
+
+      li {
+        position: relative;
+
+        &:nth-child(6)::before {
+          content: "";
+          position: absolute;
+          display: inline-block;
+          width: 0.5px;
+          height: 52px;
+          background-color: $texto-secundario;
+          left: -36px;
+          top: -9px;
+          border-radius: 1px;
+        }
+
+        a {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 3px;
+          color: darken($texto-principal, 30%);
+          text-align: center;
+
+          &:hover {
+            color: lighten($texto-principal, 30%);
+          }
+
+          span {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}
