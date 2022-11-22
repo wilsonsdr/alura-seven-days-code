@@ -48,4 +48,25 @@
       }
     }
   }
+
+  .movies {
+    margin-top: 180px;
+
+    .list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      .title {
+        color: $base-grey;
+      }
+
+      .track {
+        display: flex;
+        width: 100%;
+        overflow: scroll;
+        gap: 10px;
+      }
+    }
+  }
 }
