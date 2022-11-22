@@ -10,6 +10,6 @@ burguer.addEventListener("click", () => {
   links.classList.toggle("active");
 
   if (contador % 2 == 0) {
-    about = document.querySelector(".about").style.marginTop = "initial";
+    about = document.querySelector(".about").style.marginTop = "96px";
   }
 });

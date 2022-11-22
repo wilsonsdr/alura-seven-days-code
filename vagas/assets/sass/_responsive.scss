@@ -1,10 +1,10 @@
 @media (max-width: 1000px) {
   .header {
-    position: fixed;
-    width: 100%;
-    top: 0px;
-
     .navbar {
+      position: fixed;
+      width: 100%;
+      top: 0;
+
       .links {
         position: fixed;
         left: -100%;
@@ -18,7 +18,7 @@
         background-color: $grey-900;
 
         li {
-          margin: 8px auto;
+          margin: 4px auto;
         }
 
         a {
@@ -53,6 +53,18 @@
       .navigationActions {
         display: none;
       }
+    }
+
+    .about {
+      padding-top: 96px;
+    }
+  }
+
+  .main {
+    padding: 107px 80px;
+
+    .metrics {
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 }

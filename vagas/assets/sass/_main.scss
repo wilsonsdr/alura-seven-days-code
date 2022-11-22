@@ -1,0 +1,26 @@
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 107px 80px;
+
+  .metrics {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: flex-start;
+    gap: 32px;
+
+    .number {
+      @include number;
+    }
+
+    .text {
+      @include text;
+    }
+
+    .supportingText {
+      @include supportingText;
+      font-size: 16px;
+    }
+  }
+}
