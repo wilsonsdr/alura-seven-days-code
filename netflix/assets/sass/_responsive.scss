@@ -1,6 +1,7 @@
 @media (max-width: 1000px) {
   .header {
     position: fixed;
+    top: 0;
     width: 100%;
     background-color: black;
     z-index: 1;
@@ -19,7 +20,7 @@
         width: 100%;
         transition: 0.3s;
         border-radius: 0 0 20px 20px;
-        background-color: black;
+        background-color: rgba(0,0,0, 0.9);
 
         li {
           margin: 5px auto;
