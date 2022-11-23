@@ -51,140 +51,201 @@
           @include texto-secundario;
           position: relative;
 
-          span {
-            margin-left: 10px;
-
-            &::before {
-              content: "";
-              display: inline-block;
-              width: 2px;
-              height: 2px;
-              background-color: $texto-secundario;
-              position: absolute;
-              border-radius: 50%;
-              bottom: 9px;
-              left: 178px
-            }
+          &::before {
+            @include bolinha;
+            bottom: 9px;
+            left: 178px
           }
         }
 
         a {
-          @include texto-secundario;
-          color: $primario;
-        }
-
-        .profileActions {
-          display: flex;
-          align-items: center;
-          gap: 10px;
-          margin-top: 10px;
-
-          .button {
-            @include botao;
-          }
-
-          .button:nth-child(2) {
-            background-color: $fundo-card;
-            border: 2px solid $primario;
-            color: $primario;
-
-            &:hover {
-              background-color: lighten($fundo-card, 10%);
-            }
-          }
+          @include link;
         }
       }
 
-      .careerDetails {
+      .profileActions {
         display: flex;
-        align-items: flex-start;
-        gap: 5px;
+        align-items: center;
+        gap: 10px;
+        margin-top: 10px;
 
-        .company {
-          max-width: 32px;
-          height: 32px;
+        .button {
+          @include botao;
         }
 
-        .subtitle {
-          @include texto-primario;
-          font-size: 16px;
-          font-weight: 600;
+        .button:nth-child(2) {
+          background-color: $fundo-card;
+          border: 2px solid $primario;
+          color: $primario;
+
+          &:hover {
+            background-color: lighten($fundo-card, 10%);
+          }
         }
       }
     }
 
-    .highlights {
+    .careerDetails {
+      display: flex;
+      align-items: flex-start;
+      gap: 5px;
+
+      .company {
+        max-width: 32px;
+        height: 32px;
+      }
+
+      .subtitle {
+        @include texto-primario;
+        font-size: 16px;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .highlights {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: $fundo-card;
+    padding: 16px 24px;
+    border-radius: 16px 16px;
+    margin-top: 8px;
+    height: 312px;
+
+    .title {
+      @include texto-primario;
+      font-size: 20px;
+    }
+
+    .cardContainer {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      align-items: flex-start;
+      gap: 10px;
+      margin-top: 8px;
+
+      .card {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid $texto-secundario;
+        border-radius: 8px;
+        gap: 4px;
+
+        .headerCard {
+          padding: 12px 14px 0 14px;
+
+          .textCard {
+            @include texto-secundario;
+            font-size: 12px
+          }
+
+          .titleCard {
+            @include texto-primario;
+            font-size: 14px;
+          }
+        }
+
+        .imgCard {
+          width: 100%;
+          height: 152px;
+          border-radius: 0px 8px;
+        }
+      }
+    }
+  }
+
+  .activies {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: $fundo-card;
+    padding: 16px 24px;
+    border-radius: 16px 16px;
+    margin-top: 8px;
+
+    .title {
+      @include texto-primario;
+      font-size: 20px;
+    }
+
+    .activieLink {
+      @include link;
+    }
+
+    .postContainer {
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
-      background-color: $fundo-card;
-      padding: 16px 24px;
-      border-radius: 16px 16px;
-      margin-top: 8px;
-      height: 312px;
+      gap: 10px;
+      padding-top: 13px;
 
-      .titleHighlight {
-        font-size: 20px;
-      }
+      .post {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        position: relative;
 
-      .cardContainer {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        align-items: flex-start;
-        gap: 10px;
-        margin-top: 8px;
+        &::after {
+          content: "";
+          display: inline-block;
+          width: 100%;
+          height: 1px;
+          background-color: $texto-secundario
+        }
 
-        .card {
-          display: flex;
-          flex-direction: column;
-          border: 1px solid $texto-secundario;
-          border-radius: 8px;
-          gap: 4px;
+        .textCard {
+          @include texto-secundario;
+          font-size: 14px;
 
-          .headerCard {
-            padding: 12px 14px 0 14px;
+          span {
+            position: relative;
 
-            .textCard {
-              @include texto-secundario;
-              font-size: 12px
-            }
-
-            .titleCard {
-              @include texto-primario;
-              font-size: 14px;
-            }
-          }
-
-          .imgCard {
-            width: 100%;
-            height: 152px;
-            border-radius: 0px 8px;
-          }
-
-          .reactionCard {
-            display: flex;
-            align-items: flex-start;
-            justify-content: space-between;
-            padding: 0 4px 4px 4px;
-
-            .likeCard {
-              display: flex;
-              align-items: center;
-              gap: 4px;
-            }
-
-            .likes,
-            .comments {
-              @include texto-secundario;
-              font-size: 12px;
-            }
-
-            .comments:hover {
-              color: $primario;
+            &::before {
+              @include bolinha;
+              bottom: 8px;
+              right: 42px;
             }
           }
         }
+
+        .textCard:nth-child(2) {
+          color: $branco-base;
+        }
+
+        img {
+          width: 64px;
+          height: 64px;
+        }
       }
     }
+
+    .show {
+      @include texto-secundario;
+      text-align: center;
+    }
+  }
+}
+
+// reuse classes
+.reactionCard {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 0 4px 4px 4px;
+
+  .likeCard {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .likes,
+  .comments {
+    @include texto-secundario;
+    font-size: 12px;
+  }
+
+  .comments:hover {
+    color: $primario;
   }
 }
