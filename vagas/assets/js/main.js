@@ -5,11 +5,11 @@ const burguer = document.querySelector(".burguer");
 
 burguer.addEventListener("click", () => {
   contador++;
-  about = document.querySelector(".about").style.marginTop = "230px";
+  about = document.querySelector(".about").style.paddingTop = "320px";
   burguer.classList.toggle("active");
   links.classList.toggle("active");
 
   if (contador % 2 == 0) {
-    about = document.querySelector(".about").style.marginTop = "96px";
+    about = document.querySelector(".about").style.paddingTop = "172px";
   }
 });

@@ -1,8 +1,5 @@
 .main {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 107px 80px;
+  padding: 107px 112px;
 
   .metrics {
     display: grid;
@@ -21,6 +18,40 @@
     .supportingText {
       @include supportingText;
       font-size: 16px;
+    }
+  }
+
+  .jobs {
+    padding-top: 192px;
+
+    .talents {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 40px;
+      text-align: center;
+
+      .subHeading {
+        @include subHeading;
+        padding: 4px 12px;
+        background: rgba(142, 36, 36, 0.05);
+        border-radius: 16px;
+      }
+
+      .heading {
+        @include heading;
+        font-size: 36px;
+      }
+
+      .supportingText {
+        @include supportingText;
+      }
+
+      img {
+        width: 1310px;
+        height: 400px;
+      }
     }
   }
 }
