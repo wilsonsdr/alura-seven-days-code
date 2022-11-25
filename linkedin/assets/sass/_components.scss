@@ -9,6 +9,16 @@ $primario: #70b5f9;
 $positivo: #3ec786;
 $branco-base: #ffffff;
 
+@mixin container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: $fundo-card;
+  padding: 16px 24px;
+  border-radius: 16px 16px;
+  margin-top: 8px;
+}
+
 @mixin texto-primario {
   font-weight: 600;
   font-size: 24px;

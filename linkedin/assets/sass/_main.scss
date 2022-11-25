@@ -104,14 +104,7 @@
   }
 
   .highlights {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    background-color: $fundo-card;
-    padding: 16px 24px;
-    border-radius: 16px 16px;
-    margin-top: 8px;
-    height: 312px;
+    @include container;
 
     .title {
       @include texto-primario;
@@ -156,13 +149,7 @@
   }
 
   .activies {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    background-color: $fundo-card;
-    padding: 16px 24px;
-    border-radius: 16px 16px;
-    margin-top: 8px;
+    @include container;
 
     .title {
       @include texto-primario;
@@ -222,6 +209,21 @@
     .show {
       @include texto-secundario;
       text-align: center;
+    }
+  }
+
+  .about {
+    @include container;
+
+    .title {
+      @include texto-primario;
+      font-size: 20px;
+    }
+
+    .textCard {
+      @include texto-secundario;
+      font-size: 14px;
+      color: $branco-base;
     }
   }
 }
