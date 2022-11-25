@@ -1,3 +1,15 @@
+@media (max-width: 1140px) {
+  .main {
+    .experienceContainer {
+      .experience {
+        .jobPost {
+          width: 75vh;
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 1000px) {
   .header {
     .navbar {
@@ -65,6 +77,38 @@
 
     .metrics {
       grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@media (max-width: 840px) {
+  .main {
+    .experienceContainer {
+      .experience {
+        .jobPost {
+          width: 50vh;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .main {
+    .experienceContainer {
+      .experience {
+        .jobPost {
+          width: 30vh;
+
+          .jobDescription {
+
+            
+            p {
+              font-size: 14px;
+            }
+          }
+        }
+      }
     }
   }
 }

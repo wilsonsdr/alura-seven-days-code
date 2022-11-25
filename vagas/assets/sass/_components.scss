@@ -1,8 +1,16 @@
 $base-white: #ffffff;
+$grey-200: #EAECF0;
 $grey-500: #667085;
 $grey-900: #101828;
 $logo: #3A404E;
 $hightlight: #8E2424;
+
+._container {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 32px;
+}
 
 @mixin heading {
   font-weight: 600;
