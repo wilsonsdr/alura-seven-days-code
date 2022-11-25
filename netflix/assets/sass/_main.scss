@@ -1,5 +1,5 @@
 .main {
-  padding: 80px 0;
+  padding-top: 80px;
 
   .banner {
     display: flex;
@@ -56,20 +56,42 @@
     gap: 20px;
     padding: 20px 40px;
     margin-top: 100px;
+    background-color: black;
 
     .list {
       display: flex;
       flex-direction: column;
       gap: 20px;
+      position: relative;
 
       .title {
         color: $base-grey;
       }
 
+      .leftArrow {
+        display: inline-block;
+        position: absolute;
+        content: url(../img/arrowL.svg);
+        top: 130px;
+        left: 10px;
+        cursor: pointer;
+        z-index: 999;
+      }
+
+      .rightArrow {
+        display: inline-block;
+        position: absolute;
+        content: url(../img/arrowR.svg);
+        top: 130px;
+        right: 10px;
+        cursor: pointer;
+        z-index: 999;
+      }
+
       .track {
         display: flex;
         width: 100%;
-        overflow: scroll;
+        overflow: -moz-hidden-unscrollable;
         gap: 10px;
 
         li {
