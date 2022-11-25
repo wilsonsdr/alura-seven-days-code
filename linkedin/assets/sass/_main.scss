@@ -226,6 +226,67 @@
       color: $branco-base;
     }
   }
+
+  .experience {
+    @include container;
+
+    .title {
+      @include texto-primario;
+      font-size: 20px;
+    }
+
+    .titleCard {
+      @include texto-primario;
+      font-size: 16px;
+    }
+
+    .textCard {
+      @include texto-secundario
+    }
+
+    .job {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding-top: 10px;
+      padding-left: 81px;
+
+      .item {
+        .title {
+          position: relative;
+          font-size: 16px;
+
+          &::before {
+            position: absolute;
+            display: inline-block;
+            width: 9px;
+            height: 9px;
+            content: "";
+            background-color: $texto-principal;
+            border-radius: 50%;
+            top: 12px;
+            left: -60px;
+          }
+
+          &::after {
+            position: absolute;
+            display: inline-block;
+            width: 50px;
+            height: 2px;
+            content: "";
+            background-color: $texto-secundario;
+            top: 55px;
+            left: -80px;
+            transform: rotate(90deg);
+          }
+        }
+
+        p {
+          font-size: 14px;
+        }
+      }
+    }
+  }
 }
 
 // reuse classes
