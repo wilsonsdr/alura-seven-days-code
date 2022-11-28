@@ -101,242 +101,291 @@
         font-weight: 600;
       }
     }
-  }
 
-  .highlights {
-    @include container;
+    .highlights {
+      @include container;
 
-    .title {
-      @include texto-primario;
-      font-size: 20px;
+      .title {
+        @include texto-primario;
+        font-size: 20px;
+      }
+
+      .cardContainer {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: flex-start;
+        gap: 10px;
+        margin-top: 8px;
+
+        .card {
+          display: flex;
+          flex-direction: column;
+          border: 1px solid $texto-secundario;
+          border-radius: 8px;
+          gap: 4px;
+
+          .headerCard {
+            padding: 12px 14px 0 14px;
+
+            .textCard {
+              @include texto-secundario;
+              font-size: 12px
+            }
+
+            .titleCard {
+              @include texto-primario;
+              font-size: 14px;
+            }
+          }
+
+          .imgCard {
+            width: 100%;
+            height: 152px;
+            border-radius: 0px 8px;
+          }
+        }
+      }
     }
 
-    .cardContainer {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      align-items: flex-start;
-      gap: 10px;
-      margin-top: 8px;
+    .activies {
+      @include container;
 
-      .card {
+      .title {
+        @include texto-primario;
+        font-size: 20px;
+      }
+
+      .activieLink {
+        @include link;
+      }
+
+      .postContainer {
         display: flex;
         flex-direction: column;
-        border: 1px solid $texto-secundario;
-        border-radius: 8px;
-        gap: 4px;
+        gap: 10px;
+        padding-top: 13px;
 
-        .headerCard {
-          padding: 12px 14px 0 14px;
+        .post {
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+          position: relative;
+
+          &::after {
+            content: "";
+            display: inline-block;
+            width: 100%;
+            height: 2px;
+            background-color: $texto-secundario;
+          }
 
           .textCard {
             @include texto-secundario;
-            font-size: 12px
-          }
-
-          .titleCard {
-            @include texto-primario;
             font-size: 14px;
-          }
-        }
 
-        .imgCard {
-          width: 100%;
-          height: 152px;
-          border-radius: 0px 8px;
-        }
-      }
-    }
-  }
+            span {
+              position: relative;
 
-  .activies {
-    @include container;
-
-    .title {
-      @include texto-primario;
-      font-size: 20px;
-    }
-
-    .activieLink {
-      @include link;
-    }
-
-    .postContainer {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      padding-top: 13px;
-
-      .post {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-        position: relative;
-
-        &::after {
-          content: "";
-          display: inline-block;
-          width: 100%;
-          height: 2px;
-          background-color: $texto-secundario;
-        }
-
-        .textCard {
-          @include texto-secundario;
-          font-size: 14px;
-
-          span {
-            position: relative;
-
-            &::before {
-              @include bolinha;
-              bottom: 8px;
-              right: 42px;
+              &::before {
+                @include bolinha;
+                bottom: 8px;
+                right: 42px;
+              }
             }
           }
-        }
 
-        .textCard:nth-child(2) {
-          color: $branco-base;
-        }
+          .textCard:nth-child(2) {
+            color: $branco-base;
+          }
 
-        img {
-          width: 64px;
-          height: 64px;
+          img {
+            width: 64px;
+            height: 64px;
+          }
         }
+      }
+
+      .show {
+        @include texto-secundario;
+        text-align: center;
       }
     }
 
-    .show {
-      @include texto-secundario;
-      text-align: center;
-    }
-  }
-
-  .about {
-    @include container;
-
-    .title {
-      @include texto-primario;
-      font-size: 20px;
-    }
-
-    .textCard {
-      @include texto-secundario;
-      font-size: 14px;
-      color: $branco-base;
-    }
-  }
-
-  .experience {
-    @include container;
-
-    .title {
-      @include texto-primario;
-      font-size: 20px;
-    }
-
-    .titleCard {
-      @include texto-primario;
-      font-size: 16px;
-    }
-
-    .textCard {
-      @include texto-secundario
-    }
-
-    .job {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      padding-top: 10px;
-      padding-left: 81px;
-
-      .item {
-        .title {
-          position: relative;
-          font-size: 16px;
-
-          &::before {
-            position: absolute;
-            display: inline-block;
-            width: 9px;
-            height: 9px;
-            content: "";
-            background-color: $texto-principal;
-            border-radius: 50%;
-            top: 12px;
-            left: -60px;
-          }
-
-          &::after {
-            position: absolute;
-            display: inline-block;
-            width: 50px;
-            height: 2px;
-            content: "";
-            background-color: $texto-secundario;
-            top: 55px;
-            left: -80px;
-            transform: rotate(90deg);
-          }
-        }
-
-        p {
-          font-size: 14px;
-        }
-      }
-    }
-  }
-
-  .education {
-    @include container;
-    gap: 8px;
-
-    .university {
-      display: flex;
-      align-items: center;
-      gap: 8px;
+    .about {
+      @include container;
 
       .title {
-        font-size: 16px;
+        @include texto-primario;
+        font-size: 20px;
       }
 
-      p {
+      .textCard {
+        @include texto-secundario;
         font-size: 14px;
+        color: $branco-base;
+      }
+    }
+
+    .experience {
+      @include container;
+
+      .title {
+        @include texto-primario;
+        font-size: 20px;
+      }
+
+      .titleCard {
+        @include texto-primario;
+        font-size: 16px;
       }
 
       .textCard {
         @include texto-secundario
       }
+
+      .job {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        padding-top: 10px;
+        padding-left: 81px;
+
+        .item {
+          .title {
+            position: relative;
+            font-size: 16px;
+
+            &::before {
+              position: absolute;
+              display: inline-block;
+              width: 9px;
+              height: 9px;
+              content: "";
+              background-color: $texto-principal;
+              border-radius: 50%;
+              top: 12px;
+              left: -60px;
+            }
+
+            &::after {
+              position: absolute;
+              display: inline-block;
+              width: 50px;
+              height: 2px;
+              content: "";
+              background-color: $texto-secundario;
+              top: 55px;
+              left: -80px;
+              transform: rotate(90deg);
+            }
+          }
+
+          p {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+
+    .education {
+      @include container;
+      gap: 8px;
+
+      .university {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        .title {
+          font-size: 16px;
+        }
+
+        p {
+          font-size: 14px;
+        }
+
+        .textCard {
+          @include texto-secundario
+        }
+      }
+    }
+
+    .languages {
+      @include container;
+      gap: 8px;
+
+      .idiomContainer {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 28px;
+        position: relative;
+
+        &::after {
+          display: inline-block;
+          position: absolute;
+          content: "";
+          width: 732px;
+          height: 2px;
+          background-color: $texto-secundario;
+          bottom: 55px;
+          left: 0px;
+        }
+
+        .idiom {
+          .textCard {
+            @include texto-secundario
+          }
+        }
+      }
     }
   }
 
-  .languages {
-    @include container;
+  .sideCard {
+    display: flex;
+    flex-direction: column;
     gap: 8px;
 
+    .card {
+      @include container;
+      margin-top: 0;
+      gap: 16px;
 
-    .idiomContainer {
-      display: flex;
-      align-items: flex-start;
-      flex-direction: column;
-      gap: 28px;
-      position: relative;
+      .title {
+        font-size: 16px;
+      }
 
-      &::after {
-        display: inline-block;
-        position: absolute;
-        content: "";
-        width: 732px;
-        height: 2px;
-        background-color: $texto-secundario;
-        bottom: 55px;
-        left: 0px;
-       }
+      .peopleContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
 
-      .idiom {
-        .textCard {
-          @include texto-secundario
+        .people {
+          display: flex;
+          align-items: flex-start;
+          gap: 6px;
+
+          .name {
+            font-size: 14px;
+          }
+
+          .textCard {
+            @include texto-secundario;
+            line-height: 14.52px;
+            font-size: 12px;
+          }
+
+          button {
+            @include botao;
+            margin-top: 8px;
+            background-color: transparent;
+            color: $branco-base;
+            border: 2px solid $branco-base;
+
+            &:hover {
+              color: initial;
+            }
+          }
         }
       }
     }
