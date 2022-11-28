@@ -78,16 +78,37 @@
     .metrics {
       grid-template-columns: repeat(2, 1fr);
     }
+
+    .comments {
+      
+      .heading {
+        font-size: 30px;
+      }
+    }
   }
 }
 
 @media (max-width: 840px) {
   .main {
-    .experienceContainer {
-      .experience {
-        .jobPost {
-          width: 50vh;
+    .metrics {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+
+    .jobs {
+      .experienceContainer {
+        .experience {
+          .jobPost {
+            width: 484px;
+          }
         }
+      }
+    }
+
+    .comments {
+      
+      .heading {
+        font-size: 26px;
       }
     }
   }
@@ -95,29 +116,20 @@
 
 @media (max-width: 640px) {
   .main {
-    .experienceContainer {
-      .experience {
-        .jobPost {
-          width: 30vh;
+    .jobs {
+      .experienceContainer {
+        .experience {
+          .jobPost {
+            width: 284px;
 
-          .jobDescription {
-
-            
-            p {
-              font-size: 14px;
+            .jobDescription {
+              p {
+                font-size: 14px;
+              }
             }
           }
         }
       }
-    }
-  }
-}
-
-@media (max-width: 550px) {
-  .main {
-    .metrics {
-      grid-template-columns: 1fr;
-      text-align: center;
     }
   }
 }
