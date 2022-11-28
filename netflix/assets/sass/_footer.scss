@@ -1,0 +1,56 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 40px;
+
+  .social-media {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+
+    a {
+      color: $base-white;
+      font-size: 20px;
+
+      &:hover {
+        color: $hightlight;
+      }
+    }
+  }
+
+  .contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      li {
+        display: inline-block;
+
+        &:nth-child(5) {
+          border: 2px solid darken($base-grey, 30%);
+          margin: 20px 0;
+          padding: 10px 20px;
+        }
+
+        a {
+          color: darken($base-grey, 30%);
+
+          &:hover {
+            color: $base-grey;
+          }
+        }
+      }
+    }
+
+    span {
+      color: darken($base-grey, 30%);
+    }
+  }
+}

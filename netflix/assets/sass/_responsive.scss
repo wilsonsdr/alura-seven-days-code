@@ -4,7 +4,7 @@
     top: 0;
     width: 100%;
     background-color: black;
-    z-index: 1;
+    z-index: 999;
 
     .navbar {
       justify-content: space-between;
@@ -20,7 +20,7 @@
         width: 100%;
         transition: 0.3s;
         border-radius: 0 0 20px 20px;
-        background-color: rgba(0,0,0, 0.9);
+        background-color: rgba(0, 0, 0, 0.9);
 
         li {
           margin: 5px auto;
@@ -55,5 +55,38 @@
 
   .main {
     margin-top: 110px;
+  }
+}
+
+@media (max-width: 900px) {
+  .main {
+
+    .banner {
+
+      img {
+        width: 450px;
+      }
+
+      .sinopse {
+        font-size: 22px;
+      }
+    }
+  }
+
+
+
+  .footer {
+
+    .contact,
+    .social-media {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+
+      &>div:not(:nth-child(1)) {
+        display: none;
+      }
+    }
   }
 }
