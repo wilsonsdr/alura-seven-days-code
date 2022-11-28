@@ -80,7 +80,6 @@
     }
 
     .comments {
-      
       .heading {
         font-size: 30px;
       }
@@ -106,7 +105,6 @@
     }
 
     .comments {
-      
       .heading {
         font-size: 26px;
       }
@@ -129,6 +127,26 @@
             }
           }
         }
+      }
+    }
+  }
+
+  .footer {
+    .heading {
+      font-size: 26px;
+    }
+
+    .form {
+      flex-direction: column;
+    }
+  }
+}
+
+@media (max-width: 564px) {
+  .main {
+    .comments {
+      .heading {
+        font-size: 20px;
       }
     }
   }
