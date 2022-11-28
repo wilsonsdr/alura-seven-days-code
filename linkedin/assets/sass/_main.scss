@@ -176,8 +176,8 @@
           content: "";
           display: inline-block;
           width: 100%;
-          height: 1px;
-          background-color: $texto-secundario
+          height: 2px;
+          background-color: $texto-secundario;
         }
 
         .textCard {
@@ -283,6 +283,60 @@
 
         p {
           font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .education {
+    @include container;
+    gap: 8px;
+
+    .university {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      .title {
+        font-size: 16px;
+      }
+
+      p {
+        font-size: 14px;
+      }
+
+      .textCard {
+        @include texto-secundario
+      }
+    }
+  }
+
+  .languages {
+    @include container;
+    gap: 8px;
+
+
+    .idiomContainer {
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 28px;
+      position: relative;
+
+      &::after {
+        display: inline-block;
+        position: absolute;
+        content: "";
+        width: 732px;
+        height: 2px;
+        background-color: $texto-secundario;
+        bottom: 55px;
+        left: 0px;
+       }
+
+      .idiom {
+        .textCard {
+          @include texto-secundario
         }
       }
     }
