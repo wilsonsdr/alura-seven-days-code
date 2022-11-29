@@ -10,6 +10,7 @@ const lista = {
 //#endregion
 
 //#region variaveis
+let numero;
 let contador = -1;
 let verificar;
 let alimento;
@@ -76,19 +77,39 @@ function adicionarItemAoArray() {
 
 //#region função remover
 function remover() {
-  categoria = prompt("Qual o número da categoria?").toLowerCase();
+  alert(
+    "Para remover é necessário, (1) informar o número da categoria, (2) qual o número do alimento e (3) o nome do alimento a ser removido"
+  );
+
+  categoria = prompt("Qual o número da categoria?");
 
   if (categoria !== null) {
-    alimento = prompt("Qual o nome do alimento a ser removido?");
-    console.log(categoria);
+    numero = prompt("Qual o número do alimento?");
+    console.log(numero);
+  }
+
+  if (numero !== null) {
+    alimento = prompt("Qual o nome do alimento a ser removido?").toLowerCase();
+    console.log(alimento);
   }
 
   verificar = lista[Object.keys(lista)[categoria]];
 
-  for (fruta in verificar) {
-    if (verificar[fruta] == alimento) {
-      verificar.splice(fruta, 1);
+  if (verificar.length >= 1) {
+    for (fruta in verificar) {
+      if (verificar[fruta] == alimento) {
+        verificar.splice(fruta, 1);
+        document
+          .querySelectorAll(".lista")
+          [categoria].querySelectorAll("p")
+          [numero].remove();
+        alert(`${alimento} removido da lista`);
+      } else if (verificar[fruta] !== alimento) {
+        alert("Não foi possível encontrar o alimento dentro da lista!");
+      }
     }
+  } else if (verificar.length == 0) {
+    alert("Não há nenhum alimento dentro da lista");
   }
 }
 //#endregion
