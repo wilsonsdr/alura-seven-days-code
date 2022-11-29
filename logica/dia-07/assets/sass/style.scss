@@ -1,0 +1,159 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background: url(https://4kwallpapers.com/images/wallpapers/macos-big-sur-apple-layers-fluidic-colorful-wwdc-stock-2048x1536-1455.jpg) no-repeat top;
+  background-size: cover;
+}
+
+/* #region variables*/
+$primary-color: #373737;
+$secondary-color: #222222;
+$result: #fff;
+$border: #f7f7f7;
+
+/* #endregion */
+.container {
+  width: 359px;
+  border-radius: 10px;
+  border: 2px solid $border;
+  box-shadow: 0 -5px 10px 0 rgba(0, 0, 0, 0.5)
+}
+
+.balls {
+  display: flex;
+  position: relative;
+  height: 39px;
+  background-color: $primary-color;
+  border-radius: 8px 8px 0 0;
+
+  .ball {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &:nth-child(1) {
+      background-color: #E9524A;
+      top: 10px;
+      left: 10px;
+    }
+
+    &:nth-child(2) {
+      background-color: #59C837;
+      top: 10px;
+      left: 30px;
+    }
+
+    &:nth-child(3) {
+      background-color: #F1AE1B;
+      top: 10px;
+      left: 50px;
+    }
+  }
+}
+
+.resultContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-height: 117px;
+  background-color: $secondary-color;
+  position: relative;
+
+  &::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: $border;
+    bottom: 0;
+  }
+
+  &::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: $border;
+    top: 0;
+  }
+
+  .result {
+    color: $result;
+    padding-right: 20px;
+  }
+}
+
+.typeContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 76px;
+  position: relative;
+  background-color: $primary-color;
+
+  &::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: $border;
+    bottom: 0;
+  }
+
+  .type {
+    background-color: $secondary-color;
+    color: $result;
+    min-height: 76px;
+    width: 100%;
+    padding: 20px;
+    font-size: 18px;
+  }
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 60px);
+  grid-template-rows: repeat(5, 40px);
+  padding: 20px;
+  gap: 20px;
+  border-radius: 0 0 8px 8px;
+  background-color: $primary-color;
+
+  .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    border: 2px solid $border;
+    cursor: pointer;
+    background-color: $secondary-color;
+    color: $result;
+
+    &:hover {
+      background-color: lighten($secondary-color, 5%);
+    }
+
+    &:nth-child(8) {
+      grid-column: 4;
+      grid-row: 2 / -1;
+    }
+  }
+}
