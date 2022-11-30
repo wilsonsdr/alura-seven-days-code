@@ -1,3 +1,4 @@
+/* #region reset e body*/
 * {
   padding: 0;
   margin: 0;
@@ -16,139 +17,169 @@ body {
   background-size: cover;
 }
 
-/* #region variables*/
-$primary-color: #373737;
-$secondary-color: #222222;
-$result: #fff;
-$border: #f7f7f7;
+/* #endregion */
+/* #region variaveis*/
+
+// tema escuro
+$cor-primaria: #373737;
+$cor-secundaria: #222222;
+$contraste: #ffffff;
+$branco-secundario: #f7f7f7;
+
 
 /* #endregion */
-.container {
-  width: 359px;
+/* #region tema claro*/
+.cabecalho.claro,
+.botoes.claro {
+  background-color: $contraste;
+}
+
+.calculadora-container.claro {
+  border: none;
+}
+
+.resultado-container.claro,
+.digitacao-container.claro {
+  background-color: $branco-secundario;
+  color: $cor-primaria;
+}
+
+.resultado-container.claro, .botoes.claro {
+  border-top: 2px solid darken($contraste, 10%);
+  border-bottom: 2px solid darken($contraste, 10%);
+}
+
+.botoes {
+  .botao.claro {
+    background-color: $branco-secundario;
+    border: 2px solid $contraste;
+    color: #222222;
+    &.claro:hover {
+      background-color: darken($branco-secundario, 5%);
+    }
+  }
+}
+
+i.claro {
+  color: $cor-primaria;
+  transition: 0.3s;
+  rotate: -180deg;
+}
+
+/* #endregion */
+/* #region calculadora container*/
+.calculadora-container {
+  display: grid;
+  grid-template-columns: 360px;
+  grid-template-rows: 39px 117px 71px auto;
+  flex-direction: column;
   border-radius: 10px;
-  border: 2px solid $border;
+  border: 2px solid $contraste;
   box-shadow: 0 -5px 10px 0 rgba(0, 0, 0, 0.5)
 }
 
-.balls {
+/* #endregion */
+/* #region cabeçalho*/
+.cabecalho {
   display: flex;
-  position: relative;
-  height: 39px;
-  background-color: $primary-color;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $cor-primaria;
   border-radius: 8px 8px 0 0;
+  position: relative;
+}
 
-  .ball {
-    position: absolute;
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
-    cursor: pointer;
+.bolinha {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  cursor: pointer;
+  top: 12px;
 
-    &:nth-child(1) {
-      background-color: #E9524A;
-      top: 10px;
-      left: 10px;
-    }
+  &:nth-child(1) {
+    background-color: #E9524A;
+    left: 10px;
+  }
 
-    &:nth-child(2) {
-      background-color: #59C837;
-      top: 10px;
-      left: 30px;
-    }
+  &:nth-child(2) {
+    background-color: #59C837;
+    left: 30px;
+  }
 
-    &:nth-child(3) {
-      background-color: #F1AE1B;
-      top: 10px;
-      left: 50px;
-    }
+  &:nth-child(3) {
+    background-color: #F1AE1B;
+    left: 50px;
   }
 }
 
-.resultContainer {
+i {
+  cursor: pointer;
+  padding: 10px;
+  color: $contraste;
+  font-size: 14px;
+  rotate: 180deg;
+  transition: 0.3s;
+}
+
+/* #endregion */
+/* #region resultado container*/
+.resultado-container {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  min-height: 117px;
-  background-color: $secondary-color;
-  position: relative;
+  background-color: $cor-secundaria;
+  border-top: 2px solid $contraste;
+  border-bottom: 2px solid $contraste;
+  color: $contraste;
 
-  &::after {
-    content: "";
-    display: inline-block;
-    position: absolute;
-    height: 2px;
-    width: 100%;
-    background-color: $border;
-    bottom: 0;
-  }
-
-  &::before {
-    content: "";
-    display: inline-block;
-    position: absolute;
-    height: 2px;
-    width: 100%;
-    background-color: $border;
-    top: 0;
-  }
-
-  .result {
-    color: $result;
-    padding-right: 20px;
+  .resultado {
+    padding: 20px;
+    font-size: 36px;
+    word-break: break-all;
   }
 }
 
-.typeContainer {
+/* #endregion */
+/* #region digitação container*/
+.digitacao-container {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  min-height: 76px;
-  position: relative;
-  background-color: $primary-color;
+  background-color: $cor-secundaria;
+  overflow: scroll;
+  color: $contraste;
 
-  &::after {
-    content: "";
-    display: inline-block;
-    position: absolute;
-    height: 2px;
-    width: 100%;
-    background-color: $border;
-    bottom: 0;
-  }
-
-  .type {
-    background-color: $secondary-color;
-    color: $result;
-    min-height: 76px;
-    width: 100%;
+  .digitacao {
     padding: 20px;
-    font-size: 18px;
+    word-break: break-all;
   }
 }
 
-.buttons {
+/* #endregion */
+/* #region botoes*/
+.botoes {
   display: grid;
   grid-template-columns: repeat(4, 60px);
   grid-template-rows: repeat(5, 40px);
   padding: 20px;
   gap: 20px;
   border-radius: 0 0 8px 8px;
-  background-color: $primary-color;
+  background-color: $cor-primaria;
+  border-top: 2px solid $contraste;
 
-  .button {
+  .botao {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    height: 100%;
     border-radius: 4px;
-    border: 2px solid $border;
+    border: 2px solid $contraste;
+    background-color: $cor-secundaria;
+    color: $contraste;
     cursor: pointer;
-    background-color: $secondary-color;
-    color: $result;
 
     &:hover {
-      background-color: lighten($secondary-color, 5%);
+      background-color: lighten($cor-secundaria, 5%);
     }
 
     &:nth-child(8) {
@@ -157,3 +188,4 @@ $border: #f7f7f7;
     }
   }
 }
+/* #endregion */
