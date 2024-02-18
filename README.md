@@ -1,1 +1,1 @@
-Este repositório é para guardar os códigos dos desafios do 7 Days of Code
+This repository is to save the 7 Days of challenges code
