@@ -1,1 +1,1 @@
-This repository is for storing the codes of the 7 Days Code challenges.
+This repository is for storing the code of the Alura 7 Days Code.
